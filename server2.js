@@ -1,11 +1,14 @@
-const http = require('http');
+const http = require( 'http' )
+const HOSTNAME = '127.0.0.1'
+const PORT = 3000;
 
-const server = http.createServer((req,res) => {
-    res.writeHead(200, {"content-Type" : "text/html"});
+const server = http.createServer( ( req, res ) => {
+    res.write = 200,{"content-Type" : "text/html"};
     res.end('<h1>Hello World</h1>');
 });
 
-const PORT = 3000;
-server.listen(PORT, () => {
-console.log(`Server running at https:/localhost:${PORT}/`);
+server.listen(PORT,() => {
+    console.log('Server running at http://${HOSTNAME}:${PORT}/'
+    );
 })
+    
